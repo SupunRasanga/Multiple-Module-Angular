@@ -6,6 +6,9 @@ import { SigningComponent } from './signing/signing.component';
 import { AuthBaseComponent } from './auth-base/auth-base.component';
 import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './errors/page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { AlertComponent } from '../shared/components/alert/alert.component';
 
 
 
@@ -14,11 +17,18 @@ import { PageNotFoundComponent } from './errors/page-not-found/page-not-found.co
     SigningComponent,
     AuthBaseComponent,
     SignupComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
-  ]
+    AuthRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    SharedModule
+  ],
+  // entryComponents: [
+  //   AlertComponent
+  // ]
 })
 export class AuthModule { }

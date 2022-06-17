@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AlertComponent } from './components/alert/alert.component';
 import { HeaderComponent } from './theme/header/header.component';
 import { FooterComponent } from './theme/footer/footer.component';
+import { AlertPopupComponent } from './components/alert-popup/alert-popup.component';
+import { PlaceholderDirective } from './directives/placeholder.directive';
 
 
 
@@ -10,7 +12,10 @@ import { FooterComponent } from './theme/footer/footer.component';
   declarations: [
     AlertComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AlertPopupComponent,
+    PlaceholderDirective
+
   ],
   imports: [
     CommonModule
@@ -18,7 +23,9 @@ import { FooterComponent } from './theme/footer/footer.component';
   exports:[
     AlertComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AlertPopupComponent,
+    PlaceholderDirective
   ]
 })
 export class SharedModule { }
